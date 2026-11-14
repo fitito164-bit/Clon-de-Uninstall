@@ -1,0 +1,52 @@
+feature,area,priority,original,clone,notes
+Lista de programas instalados con columnas,lista,must,yes,yes (hito 1),nombre; editor; version; fecha; tamano; arquitectura
+Ordenar por columna y orden inicial configurable,lista,must,yes,partial (hito 1: orden por clic),
+Mostrar/ocultar y redimensionar columnas (se recuerdan),lista,should,yes,no,clic derecho en el encabezado
+Actualizaciones como sub-items expandibles,lista,should,yes,no,3 modos: colapsado / expandido / siempre expandido
+Cuatro grupos: Apps / Sistema / Ocultos / Microsoft Store,lista,must,yes,partial (hito 1: sin Store),
+Busqueda instantanea al escribir,lista,must,yes,yes (hito 1),expande padres si coincide un sub-item; Esc limpia
+Marca de 32 bits en Windows de 64,lista,could,yes,no,
+Lista compacta (filas de 16 px),lista,could,yes,no,
+Resaltar programas instalados recientemente,lista,could,yes,no,
+Barra de recientes y aviso emergente,lista,could,yes,no,
+Desinstalar con el desinstalador del programa,desinstalacion,must,yes,yes (hito 2),
+Detectar y terminar procesos en ejecucion,desinstalacion,must,yes,no,
+Escaneo de restos de archivos y registro,limpieza,must,yes,"partial (hito 2: carpetas, accesos directos y claves por nombre)",nucleo del producto
+Detectar restos de servicios y drivers,limpieza,should,yes,no,
+Detectar asociaciones de archivo y componentes COM / extensiones de shell,limpieza,should,yes,no,
+Detectar componentes de Windows Installer y accesos directos,limpieza,should,yes,no,
+Revisar y desmarcar restos antes de borrar,limpieza,must,yes,partial (hito 2: sin exportar a XML),tambien exportar a XML
+Borrado diferido al reiniciar (archivos en uso),limpieza,must,yes,no,
+Registro detallado de operaciones con codigos de error,limpieza,must,yes,"partial (hito 2: texto por corrida, sin codigos de Windows)",ver y guardar
+Quitar a la fuerza (sin desinstalador),limpieza,must,yes,no,atajo Shift+Supr
+Quitar varios a la fuerza con lista combinada,lotes,should,yes,no,Ctrl / Shift para seleccionar
+Quitar solo entradas de la lista (registro),lotes,should,yes,no,con advertencia
+Desinstalar por lotes apps de Microsoft Store,lotes,could,yes,no,en el original solo aplica a Store
+Respaldo del registro antes de borrar,seguridad,must,no,yes (hito 2: .reg por clave; archivos a la Papelera),mejora propia: puntuacion de riesgo y restauracion
+Exportar lista de programas a HTML,lista,could,yes,no,Ctrl+S
+Atajos de teclado,ux,should,yes,no,F5 F9 Enter Shift+Supr Ctrl+G R E W
+Abrir carpeta de instalacion / sitio web / buscar en Google / ir al registro,ux,could,yes,no,
+Preferencias (General / Interfaz / Desinstalador),ajustes,should,yes,no,
+Tema claro y oscuro,ajustes,should,yes,no,
+Idioma de la interfaz,ajustes,could,yes,no,
+Omitir confirmacion de UAC con tarea programada,ajustes,could,yes,no,
+Comprobar actualizaciones al iniciar,ajustes,could,yes,no,
+Linea de comandos (/install /startup /store_apps),integracion,could,yes,no,
+Prueba de 30 dias y activacion de licencia,comercial,should,yes,no,decision propia de precios
+Gestor de inicio (registro, carpetas, tareas),inicio,could,yes,no,fuera del primer corte
+Agregar programa de inicio (con maximos privilegios),inicio,could,yes,no,fuera del primer corte
+Install Tracker (monitor de instalacion en tiempo real),rastreo,could,yes,no,fuera del primer corte; sin driver de kernel en la version simple
+Revertir instalacion rastreada,rastreo,could,yes,no,fuera del primer corte
+Anadir datos a una instalacion ya rastreada,rastreo,could,yes,no,fuera del primer corte
+Modo portable,distribucion,could,yes,no,
+Driver de kernel de rastreo,rastreo,skip,yes,no,riesgoso y requiere firma de controladores
+Marcas y textos del original,marca,skip,yes,no,no se copia
+Punto de restauracion de Windows automatico antes de limpiar,seguridad,should,no,no,"GitHub: ""Creating automatic recovery point before uninstall"""
+Deshacer la ultima limpieza (restaurar respaldo del registro),seguridad,should,no,yes (hito 2: desde el Historial),mejora propia a partir de borrados de mas
+Vista previa de dependencias y elementos compartidos antes de borrar,seguridad,must,no,no,caso Adobe CS6 en el foro del original
+Quitar a la fuerza con instalador roto (prueba de aceptacion),limpieza,must,no,no,benchmark de un competidor; fuente unica
+Firma de codigo y envio a proveedores de antivirus,distribucion,must,no,no,3 quejas de falsos positivos
+Informe de errores local y pruebas en Windows 10 y 11 limpios,calidad,should,no,no,fallos de arranque y regresiones
+Reactivacion de licencia sin soporte (autoservicio),comercial,should,no,no,quejas de activacion de 2013 a 2016; ir a replica-launch
+Prueba completa por tiempo o nivel gratuito basico,comercial,should,no,no,una queja de 2011; ir a replica-launch
+Detectar programas portables y restos huerfanos,limpieza,could,no,no,solo el benchmark; opcional
